@@ -25,7 +25,7 @@ const parseHttpHeaders = (httpString: string) => {
 		headers[key] = value;
 	}
 	headers.method = headersArray[0].split(" ")[0];
-	headers.url = headersArray[0].split(" ")[1].charAt(0);
+	headers.url = headersArray[0].split(" ")[1].split(" ")[0];
 	return headers;
 };
 
